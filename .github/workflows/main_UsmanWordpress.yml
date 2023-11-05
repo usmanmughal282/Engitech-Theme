@@ -1,22 +1,11 @@
-name: Deploy WordPress Theme to Azure
+name: Simple Workflow Test
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'wp-content/themes/Engitech-Theme'  # Replace with the path to your theme
+on: [push]
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Deploy to Azure Web App
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'UsmanWordpress'  # Replace with your Azure Web App name
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_257F3BC0636B401C80EFF49AF3CAB859 }}  # The secret saved in your repository
-        package: 'wp-content/themes/Engitech-Theme'  # Replace with the path to your theme directory
+      - uses: actions/checkout@v2
+      - name: Echo Test
+        run: echo "The workflow has been triggered"
