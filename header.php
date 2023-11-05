@@ -30,4 +30,3 @@
 	<div id="content" class="site-content">
 	<?php engitech_page_header(); ?>
 	<h1>This is a header from theme files</h1>
-	<h1>This is a header from theme files</h1>
