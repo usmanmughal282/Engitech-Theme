@@ -22,7 +22,7 @@ jobs:
     - name: Log in to registry
       uses: docker/login-action@v2
       with:
-        registry: https://usmanwordpress.azurewebsites.net//
+        registry: https://usmanwordpress.azurewebsites.net/
         username: ${{ secrets.AzureAppService_ContainerUsername_49e20f347c4a4ebfa94570d60690c08a }}
         password: ${{ secrets.AzureAppService_ContainerPassword_b603e3dcfaa249c99972d5677881b8cf }}
 
